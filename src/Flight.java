@@ -44,7 +44,7 @@ public class Flight {
         {
             System.out.println("This is so LONG !");
             System.out.println("Try again");
-            System.out.printf(">>");
+            System.out.print(">>");
             temp= scanner.next();
         }
         return temp;
@@ -133,7 +133,7 @@ public class Flight {
         System.out.println("Filter by :");
         switch (searchFlight(scanner)) {
             case 1 -> {
-                System.out.printf("Enter FlightId : ");
+                System.out.print("Enter FlightId : ");
                 flightId = inputCorrectStringSize(scanner);
                 if (!flightFile.findExistFlightId(flightId))
                 {
@@ -146,40 +146,40 @@ public class Flight {
                 }
             }
             case 2 -> {
-                System.out.printf("Enter Origin : ");
+                System.out.print("Enter Origin : ");
                 origin = inputCorrectStringSize(scanner);
                 flightFile.originFilter(origin);
             }
             case 3 -> {
-                System.out.printf("Enter Destination : ");
+                System.out.print("Enter Destination : ");
                 destination = inputCorrectStringSize(scanner);
                 flightFile.destinationFilter(destination);
             }
             case 4 -> {
-                System.out.printf("Enter Date : ");
+                System.out.print("Enter Date : ");
                 date = inputCorrectStringSize(scanner);
                 flightFile.dateFilter(date);
             }
             case 5 -> {
-                System.out.printf("Enter Time : ");
+                System.out.print("Enter Time : ");
                 time = inputCorrectStringSize(scanner);
                 flightFile.timeFilter(time);
             }
             case 6 -> {
                 int min;
                 int max;
-                System.out.printf("Enter min Price : ");
+                System.out.print("Enter min Price : ");
                 min = scanner.nextInt();
-                System.out.printf("Enter max Price : ");
+                System.out.print("Enter max Price : ");
                 max = scanner.nextInt();
                 flightFile.priceFilter(min,max);
             }
             case 7 -> {
                 int min;
                 int max;
-                System.out.printf("Enter min Seats : ");
+                System.out.print("Enter min Seats : ");
                 min = scanner.nextInt();
-                System.out.printf("Enter max Seats : ");
+                System.out.print("Enter max Seats : ");
                 max = scanner.nextInt();
                 flightFile.seatsFilter(min,max);
             }

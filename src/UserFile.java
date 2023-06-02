@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
@@ -12,7 +11,7 @@ public class UserFile {
     public boolean checkExistUsername(String username) throws IOException {
         this.randomAccessFile = new RandomAccessFile("Users.dat","rw");
         long line = randomAccessFile.length()/(User.USER_SIZE);
-        for (int i = 0; i < line; i++) {
+        for (long i = 0; i < line; i++) {
             if (readString(i*User.USER_SIZE).equals(username))
             {
                 randomAccessFile.close();

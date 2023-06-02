@@ -45,7 +45,7 @@ public class User {
         {
             System.out.println("This is so LONG !");
             System.out.println("Try again");
-            System.out.printf(">>");
+            System.out.print(">>");
             temp= scanner.next();
         }
         return temp;
